@@ -29,4 +29,8 @@ class QueryBuilder extends BaseQueryBuilder {
 
         return $this;
     }
+	
+	public function echo_debug()
+	{
+	}
 } 

@@ -703,7 +703,10 @@ class Entity extends Eloquent implements EntityInterface {
                 $position = $this->getNextAfterLastPosition($this->getKey());
             }
 
-            $child->moveTo($position, $this);
+            if($child = $child->moveTo($position, $this))
+			{
+				return $child;			
+			}
         }
 
         return $this;
